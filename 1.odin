@@ -9,6 +9,7 @@ main :: proc() {
     for !rl.WindowShouldClose(){
         rl.BeginDrawing()
         rl.ClearBackground(rl.BLUE)
+        rl.DrawRectangleV({640,320},{64,64}, rl.GREEN)
         rl.EndDrawing()
     }
     rl.CloseWindow()
