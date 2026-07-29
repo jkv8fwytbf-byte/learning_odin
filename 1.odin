@@ -10,8 +10,15 @@ main :: proc() {
     for !rl.WindowShouldClose(){
         rl.BeginDrawing()
         rl.ClearBackground(rl.BLUE)
+
+        if rl.IsKeyDown(.LEFT){
+            player_position.x -= 400*rl.GetFrameTime()    //move 400 px per second chaged
+        }
+
+
         rl.DrawRectangleV(player_position,{64,64}, rl.GREEN)
         rl.EndDrawing()
     }
+
     rl.CloseWindow()
 }
